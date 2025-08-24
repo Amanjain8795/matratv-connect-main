@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MATRATV CARE - Premium Feminine Hygiene Products | 15 Hours Protection</title>
+    <meta name="description" content="Premium sanitary pads with SAP gel technology for 15 hours stain-free protection. Anti-bacterial, rash-free feminine hygiene products by MATRATV CARE." />
+    <meta name="author" content="MATRATV CARE" />
+    <meta name="keywords" content="sanitary pads, feminine hygiene, matratv care, periods, women health, india, stain-free protection" />
+
+    <!-- Fonts: Poppins + Playfair Display -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+
+    <meta property="og:title" content="MATRATV CARE - Premium Feminine Hygiene Products" />
+    <meta property="og:description" content="15 Hours Stain-Free Protection with SAP gel technology. Premium sanitary pads for complete comfort and confidence." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://cdn.builder.io/api/v1/image/assets%2Fa1ebc5b67aec4d009962145ee3462ec2%2Fd920d98653d84a75a667603b0f9136f5?format=webp&width=800" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@matratvcare" />
+    <meta name="twitter:image" content="https://cdn.builder.io/api/v1/image/assets%2Fa1ebc5b67aec4d009962145ee3462ec2%2Fd920d98653d84a75a667603b0f9136f5?format=webp&width=800" />
+
+    <!-- UPI Payment System - No external scripts needed -->
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <!-- Disable external tracking services -->
+    <script>
+      // Completely disable FullStory to prevent fetch errors
+      window.FS_DISABLED = true;
+      window["_fs_namespace"] = null;
+      window._fs_initialized = true; // Prevent initialization
+
+      // Block FullStory script loading
+      if (typeof window.FS !== 'undefined') {
+        window.FS = function() { return false; };
+      }
+
+      // Override fetch for FullStory domain to prevent errors
+      const originalFetch = window.fetch;
+      window.fetch = function(url, options) {
+        if (typeof url === 'string' && url.includes('fullstory.com')) {
+          return Promise.reject(new Error('FullStory disabled'));
+        }
+        return originalFetch.apply(this, arguments);
+      };
+    </script>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
